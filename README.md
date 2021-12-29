@@ -7,4 +7,4 @@ The Administration module contains administration functionalities to manage loca
 https://www.mendix.com/terms-of-use/
 
 ## Mendix marketplace
-https://marketplace.mendix.com/link/component/23513 
+https://marketplace.mendix.com/link/component/23513
