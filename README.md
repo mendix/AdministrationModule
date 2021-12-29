@@ -1,6 +1,4 @@
-# Administration Module
-Mendix Administration module Repository for maintenance 
-
+# Administration module
 The Administration module contains administration functionalities to manage local accounts and to see app statistics like runtime information, sessions and schedules events.
 
 ## License
