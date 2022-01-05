@@ -1,6 +1,17 @@
 # Administration module
 The Administration module contains administration functionalities to manage local accounts and to see app statistics like runtime information, sessions and schedules events.
 
+## Features and limitations
+-Management of User Accounts
+-Read-only overview of
+-all active sessions
+-all schedules events
+-all runtime instances
+-Runtime statistics
+
+## Dependencies
+-Atlas_Core package
+
 ## Mendix SSO
 If you want to use this module in combination with Mendix SSO, use the following steps:
 - Import the 'MendixSSO' module from the Marketplace (https://marketplace.mendix.com/link/component/111349)
