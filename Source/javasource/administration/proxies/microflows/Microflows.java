@@ -37,22 +37,22 @@ public class Microflows
 		Map<java.lang.String, Object> params = new HashMap<>();
 		return (java.lang.Boolean) Core.microflowCall("Administration.MendixSSO_AfterStartup").withParams(params).execute(context);
 	}
-	public static administration.proxies.Account mendixSSO_CreateUser(IContext context, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
+	public static mendixsso.proxies.MendixSSOUser mendixSSO_CreateUser(IContext context, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("UserProfile", _userProfile == null ? null : _userProfile.getMendixObject());
 		params.put("UUID", _uUID);
 		IMendixObject result = (IMendixObject)Core.microflowCall("Administration.MendixSSO_CreateUser").withParams(params).execute(context);
-		return result == null ? null : administration.proxies.Account.initialize(context, result);
+		return result == null ? null : mendixsso.proxies.MendixSSOUser.initialize(context, result);
 	}
-	public static administration.proxies.Account mendixSSO_UpdateUser(IContext context, administration.proxies.Account _user, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
+	public static mendixsso.proxies.MendixSSOUser mendixSSO_UpdateUser(IContext context, mendixsso.proxies.MendixSSOUser _user, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("User", _user == null ? null : _user.getMendixObject());
 		params.put("UserProfile", _userProfile == null ? null : _userProfile.getMendixObject());
 		params.put("UUID", _uUID);
 		IMendixObject result = (IMendixObject)Core.microflowCall("Administration.MendixSSO_UpdateUser").withParams(params).execute(context);
-		return result == null ? null : administration.proxies.Account.initialize(context, result);
+		return result == null ? null : mendixsso.proxies.MendixSSOUser.initialize(context, result);
 	}
 	public static void newAccount(IContext context)
 	{
