@@ -11,6 +11,7 @@ The Administration module contains administration functionalities to manage loca
 
 ## Dependencies
 - Atlas_Core package
+- MendixSSO 
 
 ## Mendix SSO
 If you want to use this module in combination with Mendix SSO, use the following steps:
