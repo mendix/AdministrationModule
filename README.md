@@ -11,7 +11,7 @@ The Administration module contains administration functionalities to manage loca
 
 ## Dependencies
 - Atlas_UI_Resources package
-- MendixSSO module
+- Mendix SSO module
 
 ## Mendix SSO
 If you want to use this module in combination with Mendix SSO, use the following steps:
