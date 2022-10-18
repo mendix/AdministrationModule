@@ -23,7 +23,7 @@ If you do not want to make use of Mendix SSO in your project, use the following 
 - Delete the 'Mendix SSO' folder in this module or exclude all its microflows.
 
 ## License
-https://www.mendix.com/terms-of-use/
+See included [LICENSE](LICENSE) file
 
 ## Mendix marketplace
 https://marketplace.mendix.com/link/component/23513
