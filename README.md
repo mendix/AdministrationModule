@@ -22,7 +22,7 @@ If you want to use this module in combination with Mendix SSO, use the following
 - If you previously used the Mendix SSO in your application, use the 'MendixSSO_MigrateUsersToAccount' microflow to migrate users from the MendixSSOUser to the Administration.Account specialization. Please read the instructions in the microflow carefully before executing the migration.
 
 ## License
-https://www.mendix.com/terms-of-use/
+See included [LICENSE](LICENSE) file
 
 ## Mendix marketplace
 https://marketplace.mendix.com/link/component/23513
