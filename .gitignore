@@ -1,18 +1,17 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+Source/.svn
+Source/GPUCache
+Source/modeler-merge-marker
+Source/.mendix-cache
+Source/*.mpr.lock
+Source/*.mpr.bak
+Source/*.mpr.left*
+Source/*.mpr.right*
+Source/.settings
+Source/deployment
+Source/theme-cache
+proxies
+target
+*.launch
+.classpath
+.project
+.vscode
