@@ -9,6 +9,7 @@ Source/*.mpr.right*
 Source/.settings
 Source/deployment
 Source/theme-cache
+project-settings.user.json
 proxies
 target
 *.launch
