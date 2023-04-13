@@ -7,13 +7,19 @@ package administration.proxies.microflows;
 import java.util.HashMap;
 import java.util.Map;
 import com.mendix.core.Core;
-import com.mendix.core.CoreException;
-import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
+	/**
+	 * @deprecated
+	 * The default constructor of the Microflows class should not be used.
+	 * Use the static microflow invocation methods instead.
+	 */
+	@java.lang.Deprecated(since = "9.12", forRemoval = true)
+	public Microflows() {}
+
 	// These are the microflows for the Administration module
 	public static void changeMyPassword(IContext context, administration.proxies.AccountPasswordData _accountPasswordData)
 	{
@@ -31,33 +37,6 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		Core.microflowCall("Administration.ManageMyAccount").withParams(params).execute(context);
-	}
-	public static boolean mendixSSO_AfterStartup(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		return (java.lang.Boolean) Core.microflowCall("Administration.MendixSSO_AfterStartup").withParams(params).execute(context);
-	}
-	public static administration.proxies.Account mendixSSO_CreateUser(IContext context, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("UserProfile", _userProfile == null ? null : _userProfile.getMendixObject());
-		params.put("UUID", _uUID);
-		IMendixObject result = (IMendixObject)Core.microflowCall("Administration.MendixSSO_CreateUser").withParams(params).execute(context);
-		return result == null ? null : administration.proxies.Account.initialize(context, result);
-	}
-	public static void mendixSSO_MigrateUsersToAccount(IContext context)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		Core.microflowCall("Administration.MendixSSO_MigrateUsersToAccount").withParams(params).execute(context);
-	}
-	public static administration.proxies.Account mendixSSO_UpdateUser(IContext context, administration.proxies.Account _user, mendixsso.proxies.UserProfile _userProfile, java.lang.String _uUID)
-	{
-		Map<java.lang.String, Object> params = new HashMap<>();
-		params.put("User", _user == null ? null : _user.getMendixObject());
-		params.put("UserProfile", _userProfile == null ? null : _userProfile.getMendixObject());
-		params.put("UUID", _uUID);
-		IMendixObject result = (IMendixObject)Core.microflowCall("Administration.MendixSSO_UpdateUser").withParams(params).execute(context);
-		return result == null ? null : administration.proxies.Account.initialize(context, result);
 	}
 	public static void newAccount(IContext context)
 	{
@@ -77,14 +56,13 @@ public class Microflows
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		java.util.List<IMendixObject> objs = Core.microflowCall("Administration.RetrieveTimeZones").withParams(params).execute(context);
-		java.util.List<system.proxies.TimeZone> result = null;
-		if (objs != null)
-		{
-			result = new java.util.ArrayList<>();
-			for (IMendixObject obj : objs)
-				result.add(system.proxies.TimeZone.initialize(context, obj));
+		if (objs == null) {
+			return null;
+		} else {
+			return objs.stream()
+				.map(obj -> system.proxies.TimeZone.initialize(context, obj))
+				.collect(java.util.stream.Collectors.toList());
 		}
-		return result;
 	}
 	public static void saveNewAccount(IContext context, administration.proxies.AccountPasswordData _accountPasswordData)
 	{
