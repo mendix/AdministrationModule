@@ -1,0 +1,53 @@
+
+#
+# The following was added while migrating this app from SVN to Git
+#
+/**/node_modules/
+!/javascriptsource/**/node_modules/
+/*.launch
+/.classpath
+/.mendix-cache/
+/.project
+/deployment/
+/javasource/*/proxies/
+/javasource/system/
+/modeler-merge-marker
+/nativemobile/builds
+/packages/
+/project-settings.user.json
+/releases/
+*.mpr.lock
+*.mpr.bak
+/vendorlib/temp/
+
+# /
+/modeler-merge-marker
+/.mendix-cache
+/AdministrationModule.mpr.lock
+/*.launch
+/AdministrationModule.mpr.bak
+/.project
+/.classpath
+/deployment
+/project-settings.user.json
+
+# /javasource/
+/javasource/system
+
+# /javasource/administration/
+/javasource/administration/proxies
+
+# /javasource/atlas_core/
+/javasource/atlas_core/proxies
+
+# /javasource/datawidgets/
+/javasource/datawidgets/proxies
+
+# /javasource/myfirstmodule/
+/javasource/myfirstmodule/proxies
+
+# /modules/
+/modules/javasource
+/administrationmodule.mpr.bak
+/administrationmodule.mpr.lock
+/nativemobile/builds/
