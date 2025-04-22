@@ -51,3 +51,5 @@
 /administrationmodule.mpr.bak
 /administrationmodule.mpr.lock
 /nativemobile/builds/
+.DS_Store
+/.svn/
